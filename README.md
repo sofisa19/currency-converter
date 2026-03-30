@@ -1,56 +1,73 @@
-# Welcome to your Expo app 👋
+# 💱 Currency Converter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, fast, and interactive Currency Converter application built with **React Native** and **Expo**. This application enables users to reliably convert between various global currencies with real-time exchange rates.
 
-## Get started
+> **Note:** The application is currently tested and fully working for **Android**.
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
-   npm install
-   ```
+- **Real-Time Exchange Rates**: Fetches the latest currency exchange rates efficiently using `@tanstack/react-query`.
+- **Currency Selection**: Custom-built `CurrencyPicker` and `CurrencyButton` components for a seamless UI experience.
+- **Date Selection**: Integration with `@react-native-community/datetimepicker` for querying currency rates at specific historical dates.
+- **Smooth Animations**: Animated transitions and interactive UI elements powered by `react-native-reanimated`.
+- **Modern Routing**: Utilizes `expo-router` for file-based routing and navigation, ensuring a clean architecture.
+- **Type-Safe**: Developed entirely in **TypeScript** for robust logic and minimal runtime errors.
 
-2. Start the app
+## 🛠️ Technology Stack
 
-   ```bash
-   npx expo start
-   ```
+- **Framework**: [Expo](https://expo.dev/) (SDK 55) / React Native
+- **Language**: TypeScript
+- **Data Fetching & Caching**: [TanStack Query (React Query)](https://tanstack.com/query/latest)
+- **Animations**: React Native Reanimated
+- **Navigation**: Expo Router (File-based routing)
 
-In the output, you'll find options to open the app in a
+## 📂 Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+src/
+├── app/                  # Expo Router file-based route definitions (index.tsx, _layout.tsx)
+├── components/           # Reusable UI components (CurrencyButton, CurrencyPicker, etc.)
+├── hooks/                # Custom React hooks containing business and fetching logic 
+│                           (useCurrencies.ts, useCurrencyRatesUSD.ts)
+└── utils/                # Utility functions and shared types (convert.ts, types.ts)
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Getting Started
 
-### Other setup steps
+Follow these steps to run the application locally.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### 1. Install Dependencies
 
-## Learn more
+Ensure you have Node.js installed, then run the following in the project root:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2. Start the Application
 
-## Join the community
+Run the Expo development server:
 
-Join our community of developers creating universal apps.
+```bash
+npm start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 3. Run on Android (Recommended)
+
+Since the app is optimized and confirmed working for Android, you can launch it on an Android emulator or a physical device:
+
+- Press `a` in the terminal to open the app on a connected Android device or emulator using Expo.
+- Alternatively, you can use the native Android run command:
+  ```bash
+  npm run android
+  ```
+
+## 📜 Scripts
+
+Available commands defined in `package.json`:
+
+- `npm start` - Starts the Expo development server.
+- `npm run android` - Runs the app natively on Android.
+- `npm run ios` - Runs the app natively on iOS.
+- `npm run web` - Starts the project on the web.
+- `npm run lint` - Lints the codebase using Expo's linting configuration.
