@@ -2,7 +2,7 @@
 
 A modern, fast, and interactive Currency Converter application built with **React Native** and **Expo**. This application enables users to reliably convert between various global currencies with real-time exchange rates.
 
-> **Note:** The application is currently tested and fully working for **Android**.
+> **Note:** The application is currently tested and working only for **Android**.
 
 ## ✨ Features
 
